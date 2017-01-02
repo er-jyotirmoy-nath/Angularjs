@@ -1,0 +1,59 @@
+ <section  >
+          <ul class="nav nav-pills">
+            <li ng-class="{active:panel.isSelected(1)}"><a href ng-click="panel.selectpanel(1)">Description</a></li>
+            <li ng-class="{active:panel.isSelected(2)}"><a href ng-click="panel.selectpanel(2)">Reviews</a></li>
+            <li ng-class="{active:panel.isSelected(3)}"><a href ng-click="panel.selectpanel(3)">Stars</a></li>
+          </ul>
+          <hr>
+
+          <div class="panel " ng-show="panel.isSelected(1)">
+            <h2>Product  Description</h2>
+            <p>Description: {{product.description}}</p>
+            <p>Shine: {{product.shine}}</p>
+            <p>Price: {{product.price}}</p>
+            <p>Rarity: {{product.rarity}}</p>
+            <p>Color: {{product.color}}</p>
+            <p>Faces: {{product.faces}}</p>
+          </div>
+          <div class="panel" ng-show="panel.isSelected(2)">
+            <h2>Product Reviews</h2>
+            
+              <div class="well" ng-repeat="review in product.reviews">
+                  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Stars {{review.stars}}</p>
+                            <p>Body {{review.body}}</p>
+                            <p>Author {{review.author}}on{{review.createdOn | date:'dd/mm/yy'}}</p>
+                        </div>
+                      
+                    </div>
+
+                    <hr>
+                    </div>
+                       <form name="myForm"  ng-controller="ReviewController as reviewctrl" ng-submit="myForm.$valid && reviewctrl.addReview(product)" novalidate>
+                        <p>Stars {{reviewctrl.review.stars}}</p>
+                            <p>Body {{reviewctrl.review.body}}</p>
+                            <p>Author {{reviewctrl.review.author}}</p>
+                          <select class="form-control" ng-model="reviewctrl.review.stars" required>
+                          <option>Select Rating</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                          <textarea class="form-control" ng-model="reviewctrl.review.body" required></textarea>
+                          <label>by:</label>
+                          <input type="email" class="form-control" ng-model="reviewctrl.review.author" required >
+                          <div >{{myForm.$valid}}</div>
+                          <input type="submit" name="Submit" class="btn btn-success">
+                        </form>
+
+
+          </div>
+          <div class="panel" ng-show="panel.isSelected(3)">
+            <h2>Product Stars</h2>
+            <p>{{}}</p>
+          </div>
+        </section>

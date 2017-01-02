@@ -1,0 +1,8 @@
+    <div class='gallery' ng-show="product.images.length"  >
+        <img ng-src="{{product.images[gallery.current]}}"  width="200px" />
+        <ul class="list-inline thumbs">
+          <li class="thumbnail" ng-repeat="image in product.images">
+            <img ng-src="{{image}}" ng-click="iamge.setCurrent(image)" width="50px" />
+          </li>
+        </ul>
+      </div>
