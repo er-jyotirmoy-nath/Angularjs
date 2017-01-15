@@ -1,0 +1,42 @@
+[
+	{
+		"id":"4",
+	"name":"Zircon",
+	"description":"Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+	"stock":"2",
+	"price":"1100",
+	"prodcolor":"#000"
+	},
+	{	
+	"id":"1",
+	"name":"Curvey Bracelet",
+	"description":"A new Product",
+	"stock":"2290",
+	"price":"219",
+	"prodcolor":"#f5f5f5"
+	},
+	{
+		"id":"2",
+		"name":"Azurite",
+		"description":"Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+		"stock":"7",
+		"price":"110.50",
+		"prodcolor":"#CCC"
+	},
+	{
+		"id":"3",
+		"name":"Bloodstone",
+		"description":"Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+		"stock":"12",
+		"price":"22.90",
+		"prodcolor":"#EEE"
+	},
+	{
+		"id":"5",
+		"name":"BLUE CARBACLE",
+		"description":"New Item",
+		"stock":"1112",
+		"price":"2190",
+		"prodcolor":"#f5f5f5"
+	}
+]

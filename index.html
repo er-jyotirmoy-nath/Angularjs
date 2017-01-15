@@ -24,8 +24,9 @@
         <button ng-show="!store.product.canPurchase">Add to Cart</button>
       </div>
     </body> -->
-    <body  ng-controller="StoreController as store" ng-app="gemStore">
+    <body  ng-app="gemStore">
     <div class="container">
+    <div  ng-controller="StoreController as store">
     <label>Search: </label><input type="text" ng-model="search"><hr>
       <div class="product row" ng-repeat="product in store.products | filter:search">
         <h3 >
@@ -34,6 +35,7 @@
        <product-gallery></product-gallery>
       <product-tabs></product-tabs>
        
+      </div>
       </div>
       </div>
     </body>
