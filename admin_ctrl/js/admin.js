@@ -49,7 +49,7 @@
 			$http.post('product.php',$scope.ID).then(function(data){
 				console.log(data.data[0]);
 				
-				$scope.product = angular.fromjson(data.data);
+				$scope.product = angular.copy(angular.fromjson(data.data));
 				
 			}).catch(function(err){
 					console.log(err);
