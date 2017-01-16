@@ -3,7 +3,7 @@
 	<form   name="frm">
      
           <label>Name: </label>
-          <input type="text" class="form-control" ng-model="product.NAME" >
+          <input type="text" class="form-control" ng-model="product.NAME"  >
        
           <label>Description: </label>
           <input type="text" class="form-control" ng-model="product.DESCRIPTION">
