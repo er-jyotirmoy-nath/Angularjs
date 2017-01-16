@@ -48,13 +48,9 @@
 			$scope.ID = $routeParams.ID;
 			$http.post('product.php',$scope.ID).then(function(data){
 				console.log(data.data[0]);
-				$scope.NAME = data.data[1];
-				$scope.DESCRIPTION = data.data[2];
-				$scope.STOCK = data.data[3];
-				$scope.PRICE = data.data[4];
-				$scope.PRODCOLOR = data.data[5];
-				$scope.CATEGORY = data.data[6];
-				//$scope.product = data.data;
+				
+				$scope.product = angular.fromjson(data.data);
+				
 			}).catch(function(err){
 					console.log(err);
 			});
